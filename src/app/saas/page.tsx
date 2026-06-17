@@ -255,7 +255,7 @@ export default function SaaSPage() {
             whiteSpace: 'nowrap',
           }}
         >
-          Let's Build It
+          Let&apos;s Build It
         </a>
       </section>
 

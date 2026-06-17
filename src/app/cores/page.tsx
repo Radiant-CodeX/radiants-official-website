@@ -240,7 +240,7 @@ export default function CoresPage() {
             whiteSpace: 'nowrap',
           }}
         >
-          Let's Build
+          Let&apos;s Build
         </a>
       </section>
 

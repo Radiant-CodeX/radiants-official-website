@@ -14,7 +14,7 @@ const Contact = () => {
             Have a project<br />in mind?
           </h2>
           <p className="contact-sub">
-            Let's make something great together. Tell us what you're building and we'll take it from there.
+            Let&apos;s make something great together. Tell us what you&apos;re building and we&apos;ll take it from there.
           </p>
 
           <div className="contact-details">

@@ -131,7 +131,7 @@ export default function PixelsPage() {
           What We Build
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-          {services.map((s, i) => (
+          {services.map((s) => (
             <div
               key={s.num}
               style={{
@@ -239,7 +239,7 @@ export default function PixelsPage() {
             whiteSpace: 'nowrap',
           }}
         >
-          Let's Talk
+          Let&apos;s Talk
         </a>
       </section>
 
