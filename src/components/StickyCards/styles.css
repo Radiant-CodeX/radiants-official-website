@@ -51,8 +51,16 @@
     width: 75%;
 }
 
-.sticky-card-img img {
-    aspect-ratio: 5/3;
+.sticky-card-img {
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(26,26,26,0.04);
+}
+
+.sticky-card-img svg {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 3;
 }
 
 .sticky-card-copy {

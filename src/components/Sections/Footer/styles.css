@@ -1,0 +1,164 @@
+/* Footer outer wrapper - dark surround like the Fauna reference */
+.footer-outer {
+  padding: 1rem;
+  background-color: #111111;
+}
+
+/* Inner rounded card */
+.footer-card {
+  background-color: #ebebeb;
+  border-radius: 2rem;
+  padding: 3.5rem;
+  color: #1a1a1a;
+}
+
+/* Top row: tagline + nav */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.footer-tagline {
+  max-width: 340px;
+}
+
+.footer-tagline-heading {
+  font-family: 'Aeonik', sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1a1a1a;
+  margin-bottom: 1.25rem;
+}
+
+.footer-tagline-sub {
+  font-family: 'Aeonik', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(26, 26, 26, 0.45);
+  line-height: 1.6;
+}
+
+/* Nav columns */
+.footer-nav {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-nav-col-title {
+  font-family: 'Aeonik', sans-serif;
+  font-size: 0.7rem;
+  color: rgba(26, 26, 26, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav-link {
+  font-family: 'Aeonik', sans-serif;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  line-height: 1.8;
+}
+
+.footer-nav-link:hover {
+  color: rgba(26, 26, 26, 0.5);
+}
+
+/* Contact link row */
+.footer-contact-row {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.12);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+  margin-bottom: 2rem;
+}
+
+.footer-contact-link {
+  font-family: 'Aeonik', sans-serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.6);
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.footer-contact-link:hover {
+  color: rgba(26, 26, 26, 0.55);
+  border-color: rgba(26, 26, 26, 0.25);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-copy {
+  font-family: 'Aeonik', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(26, 26, 26, 0.38);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-bottom-link {
+  font-family: 'Aeonik', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(26, 26, 26, 0.38);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-bottom-link:hover {
+  color: rgba(26, 26, 26, 0.7);
+}
+
+@media (max-width: 768px) {
+  .footer-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .footer-nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-outer {
+    padding: 0.5rem;
+  }
+
+  .footer-nav {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

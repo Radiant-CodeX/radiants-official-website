@@ -17,9 +17,10 @@ interface SubItem {
 interface MenuProps {
   menuItems: MenuItem[];
   subItems: SubItem[];
+  withMask?: boolean;
 }
 
-export default function Menu({ menuItems, subItems }: MenuProps) {
+export default function Menu({ menuItems, subItems, withMask = true }: MenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [menuState, setMenuState] = useState(menuItems);
   const menuContainerRef = useRef<HTMLDivElement>(null);
@@ -125,12 +126,12 @@ export default function Menu({ menuItems, subItems }: MenuProps) {
 
   return (
     <>
-      <nav>
+      <nav className="main-nav">
         <div className="menu-toggle-wrapper width-[81%]">
           <div className="menu-toggle" onClick={toggleMenu}>
             <p className="menu-btn">Menu</p>
           </div>
-          <div className="menu-toggle-mask"></div>
+          {withMask && <div className="menu-toggle-mask"></div>}
         </div>
         <a href="#" className="menu-btn">radiants.</a>
       </nav>

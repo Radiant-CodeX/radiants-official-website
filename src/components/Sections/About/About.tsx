@@ -141,7 +141,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <section className="h-full flex flex-col md:flex-row items-center md:items-center">
+      <section className="h-screen flex flex-col md:flex-row items-center md:items-center">
         {/* Left: Headings + Image */}
         <div className="flex flex-col gap-25 w-full pl-8 md:pl-16">
           <div className="">

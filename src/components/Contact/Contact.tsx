@@ -1,56 +1,98 @@
-import React from 'react'
-import {MoveDown, Send} from 'lucide-react'
-import './styles.css'
+'use client';
+import React from 'react';
+import './styles.css';
 
 const Contact = () => {
   return (
-    <div className='containers'>
-        <div className="container-1">
-            <div className="content">
-                <p>Get in Touch</p>
-                <h1>Do you have a question, <br/> an idea, or a project you <br/> need help with? <br/> Contact Us!</h1>
-            </div>
-            <div className="social-links">
-                <div className="row1">
-                    <div>radiantsofficial.com</div>
-                    <div>sparks@radiantsofficial.com</div>
-                </div>
-                <div className="row2">
-                    <div>Instagram</div>
-                    <div>Facebook</div>
-                    <div>Github</div>
-                </div>
-            </div>
-            <div className="contact-form">
-                <img src="/images/contact-circle.svg" alt="" />
-                <span>
-                    <MoveDown />
-                </span>
-            </div>
-        </div>
-        <div className="container-2">
-            <div className="inputboxes">
-                <div className="row1">
-                    <input type="text" placeholder="Name" />
-                    <input
-                        placeholder="E-mail"
-                        type="text" 
-                    />
-                    <input placeholder="Subject" type="text" />
-                </div>
-                <div className="row2">
-                    <div className="textarea">
-                        <textarea placeholder='Message'></textarea>
-                    </div>
-                </div>
-            </div>
-            <div className="submitbtn">
-                <Send />
-                <h1>Submit</h1>
-            </div>
-        </div>
-    </div>
-  )
-}
+    <section className="contact-section">
+      <div className="contact-inner">
 
-export default Contact
+        {/* Left: info */}
+        <div className="contact-info">
+          <p className="contact-label">Get in Touch</p>
+          <h2 className="contact-heading">
+            Have a project<br />in mind?
+          </h2>
+          <p className="contact-sub">
+            Let's make something great together. Tell us what you're building and we'll take it from there.
+          </p>
+
+          <div className="contact-details">
+            <a href="mailto:sparks@radiantsofficial.com" className="contact-email">
+              sparks@radiantsofficial.com
+            </a>
+            <div className="contact-socials">
+              <a href="#" className="contact-social-link">Instagram</a>
+              <span className="contact-social-dot">·</span>
+              <a href="#" className="contact-social-link">GitHub</a>
+              <span className="contact-social-dot">·</span>
+              <a href="#" className="contact-social-link">LinkedIn</a>
+            </div>
+          </div>
+
+          {/* Spinning badge */}
+          <div className="contact-badge-wrap">
+            <img src="/images/contact-circle.svg" alt="" className="contact-badge-img" />
+            <span className="contact-badge-arrow">↓</span>
+          </div>
+        </div>
+
+        {/* Right: form */}
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <div className="contact-form-row">
+            <div className="contact-field">
+              <label className="contact-field-label">Name</label>
+              <input
+                type="text"
+                className="contact-input"
+                placeholder="Your name"
+                autoComplete="off"
+              />
+            </div>
+            <div className="contact-field">
+              <label className="contact-field-label">Email</label>
+              <input
+                type="email"
+                className="contact-input"
+                placeholder="your@email.com"
+                autoComplete="off"
+              />
+            </div>
+          </div>
+
+          <div className="contact-field">
+            <label className="contact-field-label">Subject</label>
+            <input
+              type="text"
+              className="contact-input"
+              placeholder="What's this about?"
+              autoComplete="off"
+            />
+          </div>
+
+          <div className="contact-field contact-field-grow">
+            <label className="contact-field-label">Message</label>
+            <textarea
+              className="contact-textarea"
+              placeholder="Tell us about your project, timeline, and goals..."
+              rows={6}
+            />
+          </div>
+
+          <div className="contact-form-footer">
+            <p className="contact-form-note">
+              We typically respond within 24 hours.
+            </p>
+            <button type="submit" className="contact-submit">
+              Send Message
+              <span className="contact-submit-arrow">→</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
