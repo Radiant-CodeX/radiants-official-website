@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 // import PreloaderWrapper from "../components/PreloaderWrapper";
 
@@ -13,9 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
-  title: "Radiants | Innovation Hub",
-  description: "All in one Innovation Hub",
+  title: "Radiants — We build what's next",
+  description:
+    "Radiants is a venture studio building production-grade AI products. Builders become founders. Products become companies.",
 };
 
 export default function RootLayout({
@@ -25,7 +33,7 @@ export default function RootLayout({
     <html lang="en" >
       <head>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}>
         {/* Client-side Preloader + PreHero logic */}
         {/* <PreloaderWrapper>{children}</PreloaderWrapper> */}
         {children}

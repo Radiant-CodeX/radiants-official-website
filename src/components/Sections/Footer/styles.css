@@ -162,3 +162,45 @@
     align-items: flex-start;
   }
 }
+
+/* ─── Beacon dark theme overrides (matches hero/story sections) ─── */
+.footer-outer {
+  background-color: #070503;
+  padding: 1rem;
+  border-top: 1px solid rgba(248, 205, 123, 0.09);
+}
+.footer-card {
+  background-color: #0b0805;
+  color: #f5efe2;
+  border: 1px solid rgba(248, 205, 123, 0.12);
+}
+.footer-tagline-heading {
+  color: #f5efe2;
+  font-weight: 400;
+  font-family: var(--font-instrument), serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+}
+.footer-tagline-sub {
+  color: rgba(203, 176, 131, 0.7);
+}
+.footer-nav-col-title {
+  color: #cbb083;
+}
+.footer-nav-link {
+  color: rgba(245, 239, 226, 0.65);
+}
+.footer-nav-link:hover {
+  color: #f8cd7b;
+}
+.footer-contact-link {
+  color: #f5efe2;
+}
+.footer-contact-link:hover {
+  color: #f8cd7b;
+}
+.footer-copy {
+  color: rgba(245, 239, 226, 0.4);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(248, 205, 123, 0.12);
+}

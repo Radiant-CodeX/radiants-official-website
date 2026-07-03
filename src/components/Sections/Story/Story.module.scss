@@ -1,0 +1,595 @@
+/* Story.module.scss — below-the-fold sections in the beacon design system */
+
+$gold: #f8cd7b;
+$gold-deep: #9c7439;
+$ink: #070503;
+$ink2: #0b0805;
+$cream: #f5efe2;
+$sand: #cbb083;
+
+.section {
+  position: relative;
+  background: $ink;
+  color: $cream;
+  padding: clamp(6rem, 14vh, 10rem) clamp(1.25rem, 5vw, 4rem);
+  overflow: hidden;
+}
+
+.alt {
+  background: $ink2;
+}
+
+.hairline {
+  border-top: 1px solid rgba($gold, 0.09);
+}
+
+.inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.kicker {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: $sand;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+
+  &::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: rgba($gold, 0.5);
+  }
+}
+
+.index {
+  color: rgba($sand, 0.5);
+}
+
+/* ---------- Manifesto ---------- */
+
+.statement {
+  font-family: var(--font-instrument), serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 5.2vw, 4.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  max-width: 20ch;
+  margin: 0;
+}
+
+.gold {
+  font-style: italic;
+  color: $gold;
+}
+
+.mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+.maskInner {
+  display: block;
+  will-change: transform;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: clamp(3.5rem, 8vh, 6rem);
+}
+
+.pillar {
+  border-top: 1px solid rgba($gold, 0.16);
+  padding-top: 1.25rem;
+}
+
+.pillarNo {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba($sand, 0.6);
+}
+
+.pillarTitle {
+  font-family: var(--font-instrument), serif;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  margin: 0.6rem 0 0.5rem;
+  color: $cream;
+}
+
+.pillarText {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba($cream, 0.6);
+  max-width: 34ch;
+}
+
+/* ---------- Work ---------- */
+
+.workHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.workTitle {
+  font-family: var(--font-instrument), serif;
+  font-weight: 400;
+  font-size: clamp(2.6rem, 6.5vw, 5.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $sand;
+  border: 1px solid rgba($gold, 0.25);
+  border-radius: 999px;
+  padding: 0.55em 1.1em;
+  white-space: nowrap;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #86efac;
+  box-shadow: 0 0 8px rgba(134, 239, 172, 0.8);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.browser {
+  border: 1px solid rgba($gold, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0d0a06;
+  box-shadow: 0 40px 120px -30px rgba($gold-deep, 0.25);
+  will-change: transform;
+}
+
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba($gold, 0.12);
+
+  span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba($sand, 0.25);
+  }
+}
+
+.browserUrl {
+  margin-left: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba($sand, 0.6);
+}
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: rgba($gold, 0.14);
+  border: 1px solid rgba($gold, 0.14);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: clamp(2rem, 4vh, 3rem);
+}
+
+.feature {
+  background: $ink;
+  padding: 1.5rem 1.6rem;
+}
+
+.featureTitle {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.98rem;
+  color: $cream;
+  margin-bottom: 0.4rem;
+}
+
+.featureText {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba($cream, 0.55);
+}
+
+.workCtas {
+  display: flex;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+  margin-top: clamp(2rem, 4vh, 3rem);
+}
+
+.btnGold,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.875rem;
+  padding: 0.8em 1.7em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease,
+    color 0.35s ease, border-color 0.35s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btnGold {
+  background: $gold;
+  color: #412402;
+
+  &:hover {
+    background: #ffe3a3;
+  }
+}
+
+.btnGhost {
+  border: 1px solid rgba($cream, 0.28);
+  color: $cream;
+
+  &:hover {
+    border-color: rgba($gold, 0.7);
+    color: $gold;
+  }
+}
+
+.forge {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: clamp(3rem, 7vh, 5rem);
+}
+
+.forgeCard {
+  border: 1px dashed rgba($gold, 0.22);
+  border-radius: 12px;
+  padding: 1.6rem 1.7rem;
+}
+
+.forgeLabel {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba($sand, 0.55);
+  margin-bottom: 0.7rem;
+}
+
+.forgeTitle {
+  font-family: var(--font-instrument), serif;
+  font-size: 1.5rem;
+  color: rgba($cream, 0.85);
+  margin: 0 0 0.4rem;
+}
+
+.forgeText {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba($cream, 0.5);
+}
+
+/* ---------- Process ---------- */
+
+.processTitle {
+  font-family: var(--font-instrument), serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 clamp(3rem, 7vh, 5rem);
+  max-width: 18ch;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  counter-reset: step;
+}
+
+.step {
+  border-top: 1px solid rgba($gold, 0.16);
+  padding-top: 1.25rem;
+}
+
+.stepWeek {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $gold;
+}
+
+.stepTitle {
+  font-family: var(--font-instrument), serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  margin: 0.55rem 0 0.5rem;
+}
+
+.stepText {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba($cream, 0.58);
+  max-width: 32ch;
+}
+
+.processNote {
+  margin-top: clamp(3rem, 6vh, 4.5rem);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba($sand, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba($gold, 0.6);
+    transform: rotate(45deg);
+  }
+}
+
+/* ---------- Contact CTA ---------- */
+
+.cta {
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-instrument), serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  line-height: 1.02;
+  margin: 0 auto;
+  max-width: 14ch;
+}
+
+.ctaSub {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  color: rgba($cream, 0.62);
+  margin: clamp(1.5rem, 3vh, 2.25rem) auto 0;
+  max-width: 44ch;
+}
+
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+  margin-top: clamp(2rem, 4.5vh, 3rem);
+}
+
+.ctaMeta {
+  margin-top: clamp(3.5rem, 8vh, 5.5rem);
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba($sand, 0.5);
+}
+
+/* ---------- Reveal helper ---------- */
+
+.reveal {
+  will-change: transform, opacity;
+}
+
+/* ---------- Beam thread ---------- */
+
+.storyRoot {
+  position: relative;
+}
+
+.thread {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: clamp(1.1rem, 2.4vw, 2rem);
+  width: 1px;
+  background: linear-gradient(180deg, rgba($gold, 0), rgba($gold, 0.55) 12%, rgba($gold, 0.55) 88%, rgba($gold, 0));
+  transform-origin: top;
+  transform: scaleY(0);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .thread {
+    display: none;
+  }
+}
+
+/* ---------- Subpage template ---------- */
+
+.subHero {
+  min-height: 82svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
+
+.subTitle {
+  font-family: var(--font-instrument), serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 8vw, 6.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  margin: 0;
+  max-width: 16ch;
+}
+
+.subIntro {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.7;
+  color: rgba($cream, 0.65);
+  max-width: 52ch;
+  margin-top: clamp(1.5rem, 3vh, 2.25rem);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 90px 1fr 1.2fr;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  align-items: baseline;
+  border-top: 1px solid rgba($gold, 0.14);
+  padding: clamp(1.75rem, 4vh, 2.75rem) 0;
+
+  &:last-child {
+    border-bottom: 1px solid rgba($gold, 0.14);
+  }
+}
+
+.rowNo {
+  font-family: var(--font-instrument), serif;
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: rgba($gold, 0.75);
+}
+
+.rowTitle {
+  font-family: var(--font-instrument), serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  margin: 0;
+  color: $cream;
+}
+
+.rowText {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba($cream, 0.58);
+  max-width: 46ch;
+}
+
+@media (max-width: 760px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: clamp(2rem, 4vh, 3rem);
+}
+
+.chip {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $sand;
+  border: 1px solid rgba($gold, 0.22);
+  border-radius: 999px;
+  padding: 0.7em 1.3em;
+  transition: border-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    border-color: rgba($gold, 0.6);
+    color: $gold;
+  }
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: clamp(2rem, 4vh, 3rem);
+}
+
+.col {
+  border-top: 1px solid rgba($gold, 0.16);
+  padding-top: 1.1rem;
+}
+
+.colTitle {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $sand;
+  margin-bottom: 0.9rem;
+}
+
+.colItem {
+  font-family: "Aeonik", var(--font-geist-sans), sans-serif;
+  font-size: 0.92rem;
+  line-height: 2;
+  color: rgba($cream, 0.62);
+}
+
+@media (max-width: 640px) {
+  .statement {
+    max-width: 100%;
+  }
+
+  .workHead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

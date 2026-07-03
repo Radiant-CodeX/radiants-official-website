@@ -1,10 +1,8 @@
 'use client'
-import AboutSection from '@/components/Sections/About/About'
 import HeroWithPreloader from '@/components/Sections/Hero/Hero'
 import React from 'react'
 import { ReactLenis } from 'lenis/react'
-import Cards from '@/components/Sections/Cards/Cards'
-import Contact from '@/components/Contact/Contact'
+import Story from '@/components/Sections/Story/Story'
 import Menu from '@/components/Navbar/Navbar'
 import Footer from '@/components/Sections/Footer/Footer'
 
@@ -20,7 +18,7 @@ const menuItems = [
 const subItems = [
   { title: "Connect", content: "Instagram" },
   { title: "Email", content: "sparks@radiantsofficial.com" },
-  { title: "GLOBAL", content: "2025" },
+  { title: "GLOBAL", content: "2026" },
 ];
 
 const Home = () => {
@@ -28,9 +26,7 @@ const Home = () => {
     <ReactLenis root>
       <HeroWithPreloader />
       <Menu menuItems={menuItems} subItems={subItems} />
-      <AboutSection />
-      <Cards />
-      <Contact />
+      <Story />
       <Footer />
     </ReactLenis>
   )

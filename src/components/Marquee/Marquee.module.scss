@@ -1,0 +1,49 @@
+$gold: #f8cd7b;
+$ink: #070503;
+$cream: #f5efe2;
+
+.marquee {
+  position: relative;
+  background: $ink;
+  border-top: 1px solid rgba($gold, 0.09);
+  border-bottom: 1px solid rgba($gold, 0.09);
+  padding: clamp(1.5rem, 4vh, 2.75rem) 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.track {
+  display: inline-flex;
+  will-change: transform;
+}
+
+.chunk {
+  display: inline-flex;
+  flex: none;
+}
+
+.item {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-instrument), serif;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba($cream, 0.35);
+  padding-right: 0.6em;
+}
+
+.accent {
+  font-style: italic;
+  color: $gold;
+  -webkit-text-stroke: 0;
+  margin-left: 0.25em;
+}
+
+.star {
+  color: rgba($gold, 0.5);
+  -webkit-text-stroke: 0;
+  font-size: 0.4em;
+  align-self: center;
+  margin-left: 0.6em;
+}
