@@ -182,9 +182,11 @@ const SubPage = ({
               <a
                 className={styles.btnGold}
                 data-magnetic
-                href="mailto:sparks@radiantsofficial.com?subject=Project%20enquiry"
+                href="https://cal.com/tarunkumar-sivakumar/30-minute-discovery-call"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Start a project
+                Book a 30-min call
               </a>
               <a className={styles.btnGhost} data-magnetic href="mailto:sparks@radiantsofficial.com">
                 sparks@radiantsofficial.com

@@ -273,8 +273,8 @@ const HeroWithPreloader = () => {
             >
               See MailMind live
             </a>
-            <a className={styles.btnGhost} data-magnetic href="mailto:sparks@radiantsofficial.com">
-              Book a 20-min call
+            <a className={styles.btnGhost} data-magnetic href="https://cal.com/tarunkumar-sivakumar/30-minute-discovery-call" target="_blank" rel="noopener noreferrer">
+              Book a 30-min call
             </a>
           </div>
         </div>

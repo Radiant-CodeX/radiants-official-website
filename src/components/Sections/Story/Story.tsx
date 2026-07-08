@@ -356,11 +356,11 @@ const Story = () => {
           </h2>
           <p className={styles.ctaSub} data-reveal>
             Tell us what your team is wrestling with — requests, documents, email, operations. In
-            20 minutes we&apos;ll show you what it looks like solved.
+            30 minutes we&apos;ll show you what it looks like solved.
           </p>
           <div className={styles.ctaRow} data-reveal>
-            <a className={styles.btnGold} data-magnetic href="mailto:sparks@radiantsofficial.com?subject=Project%20enquiry">
-              Start a project
+            <a className={styles.btnGold} data-magnetic href="https://cal.com/tarunkumar-sivakumar/30-minute-discovery-call" target="_blank" rel="noopener noreferrer">
+              Book a 30-min call
             </a>
             <a className={styles.btnGhost} data-magnetic href="mailto:sparks@radiantsofficial.com">
               sparks@radiantsofficial.com
