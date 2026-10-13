@@ -6,12 +6,13 @@ import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { attachMagnetic } from "@/lib/magnetic";
 import styles from "./Hero.module.scss";
+import { site } from "@/lib/site";
 
 const BOOT_LINES = [
   "radiants/beacon/ignite",
   "radiants/platform/mount",
-  "radiants/ventures/load",
-  "radiants/builders/sync",
+  "radiants/agents/load",
+  "radiants/workflows/sync",
   "radiants/system/radiant",
 ];
 
@@ -230,7 +231,7 @@ const HeroWithPreloader = () => {
         </div>
       )}
 
-      <section ref={sectionRef} className={styles.hero} aria-label="Radiants — we build what's next">
+      <section ref={sectionRef} className={styles.hero} aria-label="Radiants — AI that does the work">
         <video
           ref={videoRef}
           className={styles.video}
@@ -246,35 +247,29 @@ const HeroWithPreloader = () => {
         <div className={styles.grain} aria-hidden="true" />
 
         <div ref={contentRef} className={styles.content}>
-          <p className={`${styles.kicker} ${styles.fadeUp}`}>Radiants — a venture studio</p>
+          <p className={`${styles.kicker} ${styles.fadeUp}`}>Radiants — an AI studio</p>
 
           <h1 className={styles.h1}>
             <span className={styles.mask}>
-              <span className={styles.maskInner}>We build</span>
+              <span className={styles.maskInner}>AI that does</span>
             </span>
             <span className={styles.mask}>
               <span className={styles.maskInner}>
-                what&apos;s <em className={styles.accent}>next</em>
+                the <em className={styles.accent}>work</em>
               </span>
             </span>
           </h1>
 
           <p className={`${styles.sub} ${styles.fadeUp}`}>
-            Builders become founders. Products become companies.
+            AI agents, receptionists, and automations for growing businesses — built, shipped, and run by us.
           </p>
 
           <div className={`${styles.ctas} ${styles.fadeUp}`}>
-            <a
-              className={styles.btnGold}
-              data-magnetic
-              href="https://mailmind.radiantsofficial.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See MailMind live
-            </a>
-            <a className={styles.btnGhost} data-magnetic href="https://cal.com/tarunkumar-sivakumar/30-minute-discovery-call" target="_blank" rel="noopener noreferrer">
+            <a className={styles.btnGold} data-magnetic href={site.calUrl} target="_blank" rel="noopener noreferrer">
               Book a 30-min call
+            </a>
+            <a className={styles.btnGhost} data-magnetic href="/agents">
+              See what we build
             </a>
           </div>
         </div>

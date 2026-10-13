@@ -8,6 +8,7 @@ import Marquee from "@/components/Marquee/Marquee";
 import { attachMagnetic } from "@/lib/magnetic";
 import { scrambleIn } from "@/lib/scramble";
 import styles from "@/components/Sections/Story/Story.module.scss";
+import { site } from "@/lib/site";
 
 export type SubPageRow = { no: string; title: string; text: string };
 export type SubPageCol = { title: string; items: string[] };
@@ -182,14 +183,14 @@ const SubPage = ({
               <a
                 className={styles.btnGold}
                 data-magnetic
-                href="https://cal.com/tarunkumar-sivakumar/30-minute-discovery-call"
+                href={site.calUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Book a 30-min call
               </a>
-              <a className={styles.btnGhost} data-magnetic href="mailto:sparks@radiantsofficial.com">
-                sparks@radiantsofficial.com
+              <a className={styles.btnGhost} data-magnetic href={`mailto:${site.email}`}>
+                {site.email}
               </a>
             </div>
           </div>

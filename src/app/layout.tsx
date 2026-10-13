@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { site } from "@/lib/site";
 import "./globals.css";
-// import PreloaderWrapper from "../components/PreloaderWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,22 +22,70 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Radiants — We build what's next",
-  description:
-    "Radiants is a venture studio building production-grade AI products. Builders become founders. Products become companies.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: site.title,
+    template: "%s — Radiants",
+  },
+  description: site.description,
+  applicationName: site.name,
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#070503",
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: site.name,
+  url: site.url,
+  email: site.email,
+  description: site.description,
+  logo: `${site.url}/radiants-mark.svg`,
+  areaServed: "Worldwide",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Chennai",
+    addressRegion: "Tamil Nadu",
+    addressCountry: "IN",
+  },
+  knowsAbout: [
+    "AI agents",
+    "AI receptionists",
+    "Workflow automation",
+    "AI consulting",
+    "Web development",
+    "SaaS development",
+  ],
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" >
-      <head>
-      </head>
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}>
-        {/* Client-side Preloader + PreHero logic */}
-        {/* <PreloaderWrapper>{children}</PreloaderWrapper> */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
+        <Analytics />
       </body>
     </html>
   );

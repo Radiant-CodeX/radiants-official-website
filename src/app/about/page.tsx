@@ -1,75 +1,76 @@
-'use client';
 import React from 'react';
+import type { Metadata } from 'next';
 import SubPage, { Gold } from '@/components/SubPage/SubPage';
+
+export const metadata: Metadata = {
+  title: 'About the Studio',
+  description:
+    'Radiants is an AI studio from Chennai, India, founded by three engineers who build AI agents, automations, and products that growing businesses can actually run.',
+  alternates: { canonical: '/about' },
+};
 
 export default function AboutPage() {
   return (
     <SubPage
       kicker="About — the studio"
       titleLines={[
-        <React.Fragment key="l1">The studio behind</React.Fragment>,
+        <React.Fragment key="l1">Small team.</React.Fragment>,
         <React.Fragment key="l2">
-          what&apos;s <Gold>next</Gold>.
+          Serious <Gold>AI</Gold>.
         </React.Fragment>,
       ]}
-      intro="Radiants is a venture studio from Chennai. We build products that become companies, and builders who become founders — starting with MailMind, our AI email co-pilot live in production."
-      rowsKicker="The Radiant way"
+      intro="Radiants is an AI studio from Chennai, founded by Tarun, Rithish, and Ganesh — three engineers who believe every growing business deserves the kind of AI that used to be reserved for companies with research labs. We build it, ship it, and stay to run it."
+      rowsKicker="How we work"
       rows={[
         {
           no: '01',
-          title: 'Ownership over assignment',
-          text: 'Completing a task is not success — delivering value is. Every builder owns outcomes, not tickets.',
+          title: 'Bottleneck first',
+          text: "We don't start with a model; we start with where your team's time goes. If AI isn't the right answer, we'll tell you.",
         },
         {
           no: '02',
-          title: 'Product first',
-          text: 'Every decision should improve the product. Not your code, not your module, not your metrics. The product.',
+          title: 'Production, not prototypes',
+          text: 'Tested, monitored, and secure by construction. Nothing ships unless we would proudly put our name behind it.',
         },
         {
           no: '03',
-          title: 'Speed through clarity',
-          text: 'We move fast because everyone understands the mission — speed without direction is just waste with momentum.',
+          title: 'Privacy by default',
+          text: 'Personal data is masked before any model call, and a human keeps the approval key on anything that matters.',
         },
         {
           no: '04',
-          title: 'Build together',
-          text: 'The best products are never built by individuals. Every success belongs to the team; every failure improves the system.',
+          title: 'Built once, built to grow',
+          text: 'What we build for one business becomes a better product for the next — so every client benefits from the work before them.',
         },
       ]}
       cols={[
         {
-          title: 'The path',
-          items: [
-            'Builder — owns tasks',
-            'Builder II — owns features',
-            'Builder III — owns products',
-            'Builder IV — owns businesses',
-            'Founder — owns a venture',
-          ],
+          title: 'The team',
+          items: ['Tarun — co-founder', 'Rithish — co-founder', 'Ganesh — co-founder'],
         },
         {
           title: 'The proof',
           items: [
             'MailMind — live in production',
-            'Enterprise-grade security',
+            'PII-safe AI pipelines',
             'Full observability stack',
             'CI on every change',
           ],
         },
         {
           title: 'The base',
-          items: ['Chennai, India', 'Deployed globally', 'sparks@radiantsofficial.com'],
+          items: ['Chennai, India', 'Working with clients globally', 'sparks@radiantsofficial.com'],
         },
       ]}
-      marqueeText="Builders become"
-      marqueeAccent="founders"
+      marqueeText="Small team, serious"
+      marqueeAccent="AI"
       ctaTitle={[
         <React.Fragment key="c1">Build</React.Fragment>,
         <React.Fragment key="c2">
           with <Gold>us</Gold>.
         </React.Fragment>,
       ]}
-      ctaSub="Whether you have a product to ship or the ambition to build one — the door is the same."
+      ctaSub="Tell us what's slowing your business down. We'll tell you honestly whether AI can fix it."
     />
   );
 }

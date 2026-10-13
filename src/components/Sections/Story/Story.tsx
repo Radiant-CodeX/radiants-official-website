@@ -7,6 +7,28 @@ import Marquee from "@/components/Marquee/Marquee";
 import { attachMagnetic } from "@/lib/magnetic";
 import { scrambleIn } from "@/lib/scramble";
 import styles from "./Story.module.scss";
+import { site } from "@/lib/site";
+
+const services = [
+  {
+    no: "01",
+    href: "/agents",
+    title: "Agents",
+    text: "AI receptionists, assistants, and workflow automation — plus audits that show what's worth automating.",
+  },
+  {
+    no: "02",
+    href: "/pixels",
+    title: "Pixels",
+    text: "Websites and apps that load fast, explain clearly, and capture leads with AI built in.",
+  },
+  {
+    no: "03",
+    href: "/saas",
+    title: "SaaS",
+    text: "Custom AI products and AI features for your software — from idea to production in weeks.",
+  },
+];
 
 const Story = () => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -120,7 +142,7 @@ const Story = () => {
     <div ref={rootRef} className={styles.storyRoot}>
       <div className={styles.thread} aria-hidden="true" />
 
-      <Marquee text="We build what's" accent="next" />
+      <Marquee text="AI that does the" accent="work" />
 
       {/* ---------- Manifesto ---------- */}
       <section id="studio" className={`${styles.section} ${styles.hairline}`} aria-label="The studio">
@@ -130,19 +152,19 @@ const Story = () => {
           </p>
           <h2 className={styles.statement}>
             <span className={styles.mask}>
-              <span className={styles.maskInner}>We don&apos;t build a single</span>
+              <span className={styles.maskInner}>We find the work that</span>
+            </span>
+            <span className={styles.mask}>
+              <span className={styles.maskInner}>slows your team down —</span>
             </span>
             <span className={styles.mask}>
               <span className={styles.maskInner}>
-                product. We build <em className={styles.gold}>builders</em> —
+                and hand it to <em className={styles.gold}>AI</em>
               </span>
             </span>
             <span className={styles.mask}>
-              <span className={styles.maskInner}>who build products,</span>
-            </span>
-            <span className={styles.mask}>
               <span className={styles.maskInner}>
-                that become <em className={styles.gold}>companies</em>.
+                that actually <em className={styles.gold}>ships</em>.
               </span>
             </span>
           </h2>
@@ -150,37 +172,57 @@ const Story = () => {
           <div className={styles.pillars}>
             <div className={styles.pillar} data-reveal>
               <span className={styles.pillarNo}>01</span>
-              <h3 className={styles.pillarTitle}>Builders become founders</h3>
+              <h3 className={styles.pillarTitle}>Bottleneck first</h3>
               <p className={styles.pillarText}>
-                Ownership is the currency here. Every builder is on a documented path from first
-                commit to founding a venture.
+                We start with where your team&apos;s hours go, not with a model — and automate the
+                workflow that matters most first.
               </p>
             </div>
             <div className={styles.pillar} data-reveal>
               <span className={styles.pillarNo}>02</span>
-              <h3 className={styles.pillarTitle}>One platform, many ventures</h3>
+              <h3 className={styles.pillarTitle}>Production, not prototypes</h3>
               <p className={styles.pillarText}>
-                Shared authentication, AI infrastructure, and design systems — so every new product
-                starts weeks ahead, not from zero.
+                Tested, monitored, and secure by construction — personal data masked before any
+                model call, a human holding the approval key.
               </p>
             </div>
             <div className={styles.pillar} data-reveal>
               <span className={styles.pillarNo}>03</span>
-              <h3 className={styles.pillarTitle}>Excellence is the standard</h3>
+              <h3 className={styles.pillarTitle}>Built once, built to grow</h3>
               <p className={styles.pillarText}>
-                Nothing ships unless we&apos;d proudly put our name behind it — tested, monitored,
-                and secure by construction.
+                What we build for one business becomes a sharper product for the next — every
+                client benefits from the work before them.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ---------- Work ---------- */}
-      <section id="work" className={`${styles.section} ${styles.alt} ${styles.hairline}`} aria-label="Our work">
+      {/* ---------- Services ---------- */}
+      <section id="services" className={`${styles.section} ${styles.alt} ${styles.hairline}`} aria-label="Services">
         <div className={styles.inner}>
           <p className={styles.kicker}>
-            <span data-scramble>First light</span> <span className={styles.index}>02</span>
+            <span data-scramble>What we do</span> <span className={styles.index}>02</span>
+          </p>
+          <div className={styles.rows}>
+            {services.map((svc) => (
+              <a key={svc.href} href={svc.href} className={`${styles.row} ${styles.rowLink}`} data-reveal>
+                <span className={styles.rowNo}>{svc.no}</span>
+                <h3 className={styles.rowTitle}>
+                  {svc.title} <span className={styles.rowArrow} aria-hidden="true">→</span>
+                </h3>
+                <p className={styles.rowText}>{svc.text}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Work ---------- */}
+      <section id="work" className={`${styles.section} ${styles.hairline}`} aria-label="Our work">
+        <div className={styles.inner}>
+          <p className={styles.kicker}>
+            <span data-scramble>Our work</span> <span className={styles.index}>03</span>
           </p>
 
           <div className={styles.workHead}>
@@ -268,7 +310,7 @@ const Story = () => {
               </p>
             </div>
             <div className={styles.forgeCard} data-reveal>
-              <p className={styles.forgeLabel}>Venture 03</p>
+              <p className={styles.forgeLabel}>Next build</p>
               <h3 className={styles.forgeTitle}>Being decided</h3>
               <p className={styles.forgeText}>
                 Sourced from real problems we meet in client work — validated before a single
@@ -280,10 +322,10 @@ const Story = () => {
       </section>
 
       {/* ---------- Process ---------- */}
-      <section id="process" className={`${styles.section} ${styles.hairline}`} aria-label="How we build">
+      <section id="process" className={`${styles.section} ${styles.alt} ${styles.hairline}`} aria-label="How we build">
         <div className={styles.inner}>
           <p className={styles.kicker}>
-            <span data-scramble>How we build</span> <span className={styles.index}>03</span>
+            <span data-scramble>How we build</span> <span className={styles.index}>04</span>
           </p>
           <h2 className={styles.processTitle}>
             <span className={styles.mask}>
@@ -336,40 +378,40 @@ const Story = () => {
         </div>
       </section>
 
-      <Marquee text="Have something to" accent="build?" />
+      <Marquee text="Have work AI should be" accent="doing?" />
 
       {/* ---------- Contact CTA ---------- */}
       <section id="contact" className={`${styles.section} ${styles.alt} ${styles.hairline} ${styles.cta}`} aria-label="Contact">
         <div className={styles.inner}>
           <p className={styles.kicker} style={{ justifyContent: "center" }}>
-            <span data-scramble>Contact</span> <span className={styles.index}>04</span>
+            <span data-scramble>Contact</span> <span className={styles.index}>05</span>
           </p>
           <h2 className={styles.ctaTitle}>
             <span className={styles.mask}>
-              <span className={styles.maskInner}>Have something</span>
+              <span className={styles.maskInner}>Have work AI</span>
             </span>
             <span className={styles.mask}>
               <span className={styles.maskInner}>
-                to <em className={styles.gold}>build</em>?
+                should be <em className={styles.gold}>doing</em>?
               </span>
             </span>
           </h2>
           <p className={styles.ctaSub} data-reveal>
-            Tell us what your team is wrestling with — requests, documents, email, operations. In
-            30 minutes we&apos;ll show you what it looks like solved.
+            Tell us what your team is wrestling with — calls, bookings, email, documents,
+            operations. In 30 minutes we&apos;ll show you what it looks like automated.
           </p>
           <div className={styles.ctaRow} data-reveal>
-            <a className={styles.btnGold} data-magnetic href="https://cal.com/tarunkumar-sivakumar/30-minute-discovery-call" target="_blank" rel="noopener noreferrer">
+            <a className={styles.btnGold} data-magnetic href={site.calUrl} target="_blank" rel="noopener noreferrer">
               Book a 30-min call
             </a>
-            <a className={styles.btnGhost} data-magnetic href="mailto:sparks@radiantsofficial.com">
-              sparks@radiantsofficial.com
+            <a className={styles.btnGhost} data-magnetic href={`mailto:${site.email}`}>
+              {site.email}
             </a>
           </div>
           <div className={styles.ctaMeta} data-reveal>
             <span>Chennai — built in India</span>
             <span>Deployed globally</span>
-            <span>Radiants — a venture studio</span>
+            <span>Radiants — an AI studio</span>
           </div>
         </div>
       </section>

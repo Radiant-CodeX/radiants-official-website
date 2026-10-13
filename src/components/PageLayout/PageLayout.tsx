@@ -2,21 +2,7 @@
 import { ReactLenis, useLenis } from 'lenis/react';
 import Menu from '@/components/Navbar/Navbar';
 import React, { useEffect } from 'react';
-
-const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Pixels", href: "/pixels" },
-  { label: "Cores", href: "/cores" },
-  { label: "Agents", href: "/agents" },
-  { label: "SaaS", href: "/saas" },
-];
-
-const subItems = [
-  { title: "Connect", content: "Instagram" },
-  { title: "Email", content: "sparks@radiantsofficial.com" },
-  { title: "GLOBAL", content: "2026" },
-];
+import { menuItems, subItems } from '@/lib/site';
 
 function ScrollReset() {
   const lenis = useLenis();

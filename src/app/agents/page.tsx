@@ -1,45 +1,75 @@
-'use client';
 import React from 'react';
+import type { Metadata } from 'next';
 import SubPage, { Gold } from '@/components/SubPage/SubPage';
+
+export const metadata: Metadata = {
+  title: 'AI Agents, Receptionists & Workflow Automation',
+  description:
+    'Radiants builds AI agents for growing businesses — AI receptionists that answer and book 24/7, workflow automation for email, documents, and leads, and AI audits that show what is worth automating.',
+  alternates: { canonical: '/agents' },
+};
 
 export default function AgentsPage() {
   return (
     <SubPage
-      kicker="Agents — AI & automation"
+      kicker="Agents — AI automation & consulting"
       titleLines={[
-        <React.Fragment key="l1">Intelligence</React.Fragment>,
+        <React.Fragment key="l1">AI that does</React.Fragment>,
         <React.Fragment key="l2">
-          that <Gold>acts</Gold>.
+          the <Gold>work</Gold>.
         </React.Fragment>,
       ]}
-      intro="We build AI that does real work — triaging, extracting, drafting, deciding — with every decision explainable and personal data masked before a model ever sees it. Proven in production with MailMind."
+      intro="We find the work that eats your team's hours and hand it to AI agents — answering calls and chats, booking appointments, triaging email, processing documents, qualifying leads. A human stays in control, and personal data is masked before a model ever sees it."
       rowsKicker="What we build"
       rows={[
         {
           no: '01',
-          title: 'AI-powered workflows',
-          text: 'Intelligent pipelines that replace repetitive work — classification, routing, extraction — with reasoning your team can inspect, correct, and trust.',
+          title: 'AI automation audit',
+          text: "We map how work actually moves through your business, find the bottlenecks, and tell you plainly which are worth automating — and which aren't. You keep the roadmap whether or not we build it.",
         },
         {
           no: '02',
-          title: 'Autonomous agents',
-          text: 'Software agents that perceive, reason, and act — from single-task bots to orchestrated multi-agent systems, always with a human holding the approval key.',
+          title: 'AI receptionists & assistants',
+          text: 'Voice and chat agents trained on your business that answer questions, book appointments, capture leads, and hand off to your team when a person is needed — at any hour.',
         },
         {
           no: '03',
-          title: 'Production ML integration',
-          text: 'Models are the easy part; production is the hard part. We ship AI with evaluation harnesses, observability, cost control, and privacy built in.',
+          title: 'Workflow automation',
+          text: 'Pipelines for the repetitive work: email triage, document and data extraction, intake and routing, lead qualification — connected to the tools your team already uses.',
+        },
+        {
+          no: '04',
+          title: 'Custom AI agents',
+          text: 'Agents that reason and act across your systems, from single-task bots to multi-agent workflows — shipped with evaluation, observability, and cost control from day one.',
         },
       ]}
       chips={[
-        'Document processing',
+        'AI receptionists',
+        'Voice agents',
+        'Chat assistants',
+        'Appointment booking',
+        'Lead qualification',
         'Email triage',
-        'CV & intake automation',
-        'RAG over your data',
+        'Document processing',
         'Data extraction',
-        'Workflow orchestration',
+        'RAG over your data',
+        'CRM & tool integrations',
         'PII-safe pipelines',
         'LLM observability',
+      ]}
+      cols={[
+        {
+          title: 'Audit',
+          items: ['Fixed price', 'Workflow map & bottlenecks', 'Prioritised automation roadmap'],
+        },
+        {
+          title: 'Build',
+          items: ['Fixed scope, fixed price', 'Staging from week two', 'Deployed and handed over'],
+        },
+        {
+          title: 'Run',
+          items: ['Monthly support', 'Monitoring & tuning', 'New workflows as you grow'],
+        },
       ]}
       marqueeText="AI that ships, not"
       marqueeAccent="slideware"
@@ -49,7 +79,7 @@ export default function AgentsPage() {
           should be <Gold>doing</Gold>?
         </React.Fragment>,
       ]}
-      ctaSub="Bring us the process that eats your team's hours. We'll show you it running automated — live demo, real architecture, 20 minutes."
+      ctaSub="Bring us the process that eats your team's hours. In 30 minutes we'll show you what it looks like automated — and whether it's worth doing."
     />
   );
 }

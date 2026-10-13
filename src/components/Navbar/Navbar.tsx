@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import SplitType from "split-type";
 import "./styles.css";
 
@@ -134,9 +135,9 @@ export default function Menu({ menuItems, subItems, withMask = true }: MenuProps
           </div>
           {withMask && <div className="menu-toggle-mask"></div>}
         </div>
-        <a href="#" className="menu-logo">
+        <Link href="/" className="menu-logo" aria-label="Radiants home">
           <Image src="/radiants-mark.svg" alt="Radiants" width={30} height={30} />
-        </a>
+        </Link>
       </nav>
 
       <div className="menu-container font-aeonik" ref={menuContainerRef}>
