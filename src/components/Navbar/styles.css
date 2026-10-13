@@ -92,9 +92,14 @@ html, body {
 
 .menu-main {
     flex: 5;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(245, 239, 226, 0.2) transparent;
     border-right: 1px solid rgba(245, 239, 226, 0.125)
 }
 
@@ -111,6 +116,7 @@ html, body {
 }
 
 .menu-main .menu-bottom {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
 }
@@ -134,7 +140,7 @@ html, body {
 .menu-item {
     position: relative;
     left: -100px;
-    padding: 0.5em 0;
+    padding: min(0.5em, 1vh) 0;
     transition: left 0.3s;
 }
 
@@ -146,7 +152,7 @@ html, body {
     position: relative;
     text-decoration: none;
     color: #f5efe2;
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2rem, min(6vw, 7vh), 5rem);
     font-family: var(--font-instrument), serif;
     letter-spacing: -0.015em;
     font-weight: 400;
@@ -209,7 +215,7 @@ html, body {
     display: flex;
     gap: 1em;
     border-top: 1px solid rgba(245, 239, 226, 0.125);
-    padding: 1em 2em;
+    padding: min(1em, 1.6vh) 2em;
 }
 
 .menu-title {
@@ -231,10 +237,12 @@ html, body {
 .menu-content p {
     position: relative;
     width: max-content;
+    max-width: 100%;
     padding: 0.125em;
     font-size: 14px;
     text-transform: uppercase;
     color: #f5efe2;
+    overflow-wrap: anywhere;
 }
 
 .menu-content p::after {

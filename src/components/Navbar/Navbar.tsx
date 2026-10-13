@@ -142,7 +142,7 @@ export default function Menu({ menuItems, subItems, withMask = true }: MenuProps
 
       <div className="menu-container font-aeonik" ref={menuContainerRef}>
         <div className="menu">
-          <div className="menu-main">
+          <div className="menu-main" data-lenis-prevent>
             <div className="menu-top">
               <div className="menu-top-title">
                 <p className="text-xl">Radiants</p>
